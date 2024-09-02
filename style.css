@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap");
+
+* {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.current-tab {
+  background-color: rgba(219, 226, 239, 0.5);
+}
+
+.wrapper {
+  background-image: linear-gradient(
+    to bottom,
+    #010b67,
+    #020d70,
+    #031078,
+    #041281,
+    #05158a,
+    #041693,
+    #04179b,
+    #0318a4,
+    #0217af,
+    #0215b9,
+    #0313c4,
+    #0710cf
+  );
+}
+
+.location-container {
+  display: none;
+}
+
+.loading-container {
+  display: none;
+}
+
+.weather-info {
+  display: none;
+}
+
+.search-input::placeholder {
+  color: white;
+}
+
+.not-found {
+  display: none;
+}
+
+.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-form {
+  display: none;
+}
+
+.search-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}

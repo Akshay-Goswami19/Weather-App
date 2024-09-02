@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="wrapper w-full h-full text-white p-4 min-h-screen">
+      <div class="sm:w-[40%] w-[93%] mx-auto">
+        <h1 class="text-center text-3xl font-bold tracking-wider">
+          WEATHER APP
+        </h1>
+
+        <div class="flex mx-auto justify-between mt-5 w-full">
+          <p user-tab class="cursor-pointer text-sm rounded py-1 px-2">
+            Your Weather
+          </p>
+          <p search-tab class="cursor-pointer text-sm rounded py-1 px-2">
+            Search Weather
+          </p>
+        </div>
+
+        <div weather-container class="">
+          <!-- grant location access container -->
+          <div
+            grant-location-container
+            class="w-full text-center mt-7 location-container"
+          >
+            <img src="images/location.png" alt="" loading="lazy" class="w-20" />
+            <h2 class="text-2xl mt-5 font-semibold">Grant location access</h2>
+            <p class="sm:text-sm text-xs mt-1">
+              Allow access to get Weather information
+            </p>
+            <button
+              grant-Access
+              class="bg-blue-600 px-3 py-2 mt-5 rounded-md text-sm"
+            >
+              GRANT ACCESS
+            </button>
+          </div>
+
+          <!-- search-form -->
+          <form search-form class="w-full search-form gap-3 mt-6">
+            <input
+              type="text"
+              placeholder="Search for city..."
+              search-input
+              class="w-[90%] px-2 py-1 rounded-md bg-slate-500 focus:outline-none text-white search-input"
+            />
+            <button class="bg-blue-700 rounded-full p-2">
+              <img src="images/search.png" alt="" class="w-5" />
+            </button>
+          </form>
+
+          <!-- loading screen conatiner -->
+          <div
+            loading-container
+            class="w-full mt-7 text-center loading-container"
+          >
+            <img src="images/loading.gif" alt="" class="w-28" />
+          </div>
+
+          <!-- weather-info -->
+          <div weather-info class="w-full mt-7 sub-container weather-info">
+            <div class="flex gap-2 items-center justify-center">
+              <p city class="text-xl"></p>
+              <img src="" alt="" country class="w-6" />
+            </div>
+
+            <p desc class="capitalize mt-3"></p>
+            <img src="" alt="" weather-icon class="w-14" />
+            <h2 temp class="font-bold text-3xl"></h2>
+
+            <div
+              class="flex sm:flex-row flex-col items-center justify-center gap-3 mt-4"
+            >
+              <div
+                class="bg-slate-400 flex flex-col items-center justify-center w-32 py-3"
+              >
+                <img src="images/wind.png" alt="" class="w-10" />
+                <p class="">WINDSPEED</p>
+                <p windspeed></p>
+              </div>
+
+              <div
+                class="bg-slate-400 flex flex-col items-center justify-center w-32 py-3"
+              >
+                <img src="images/humidity.png" alt="" class="w-10" />
+                <p>HUMIDITY</p>
+                <p humidity></p>
+              </div>
+
+              <div
+                class="bg-slate-400 flex flex-col items-center justify-center w-32 py-3"
+              >
+                <img src="images/cloud.png" alt="" class="w-10" />
+                <p>CLOUDS</p>
+                <p cloudiness></p>
+              </div>
+            </div>
+          </div>
+
+          <div not-found-container class="not-found mt-5">
+            <img src="images/not-found.png" alt="" class="w-36" />
+            <p>City not found</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
